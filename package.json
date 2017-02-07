@@ -7,8 +7,8 @@
   "scripts": {
     "admin": "admin admin",
     "test": "babel-node test/index.js",
-    "server": "babel-node server.js",
-    "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'settings.json' --exec 'npm run server' --verbose"
+    "server": "echo '{}' > admin/settings.json && babel-node server.js",
+    "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'database.sqlite' --ignore 'settings.json' --exec 'npm run server' --verbose"
   },
   "dependencies": {
     "body-parser": "^1.16.0",

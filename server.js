@@ -9,24 +9,12 @@ import './epilogue';
 
 const PORT = process.env.PORT || 3000;
 
-xAdmin.init(adminConfig, (err, admin) => {
-  if (err) return console.log(err);
-  // mount express-admin before any other middlewares
-  app.use('/admin', admin);
-  // site specific middlewares
-  // app.use(express.bodyParser());
-  // site routes
-  // app.get('/', function (req, res) {
-  //     res.send('Hello World');
-  // });
-  // site server
-  app.listen(PORT, () => {
-    // console.log('My awesome site listening on port 3000');
+sequelize.sync({ force: true })
+.then(() => {
+  xAdmin.init(adminConfig, (err, admin) => {
+    if (err) return;
+    // mount express-admin before any other middlewares
+    app.use('/admin', admin);
+    app.listen(PORT);
   });
 });
-
-// sequelize
-//   .sync({ force: true })
-//   .then(() => {
-//     app.listen(PORT);
-//   });

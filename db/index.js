@@ -12,15 +12,24 @@ export const User = sequelize.define('user', {
   },
   lastName: {
     type: Sequelize.STRING,
+    field: 'last_name',
+  },
+  createdAt: {
+    type: Sequelize.STRING,
+  },
+  updatedAt: {
+    type: Sequelize.STRING,
   },
 }, {
   freezeTableName: true,
+  // timestamps: false,
 });
 
-User.sync({ force: true })
-.then(() => User.create({
-  firstName: 'John',
-  lastName: 'Hancock',
-}));
+User.sync({ force: true }, () => {
+  User.create({
+    firstName: 'John',
+    lastName: 'Hancock',
+  });
+});
 
 export default sequelize;

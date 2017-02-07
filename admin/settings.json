@@ -92,8 +92,8 @@
                 }
             },
             {
-                "name": "lastName",
-                "verbose": "lastName",
+                "name": "last_name",
+                "verbose": "last_name",
                 "control": {
                     "text": true
                 },
@@ -113,8 +113,8 @@
                 "control": {
                     "text": true
                 },
-                "type": "DATETIME",
-                "allowNull": false,
+                "type": "VARCHAR(255)",
+                "allowNull": true,
                 "defaultValue": null,
                 "listview": {
                     "show": true
@@ -129,8 +129,8 @@
                 "control": {
                     "text": true
                 },
-                "type": "DATETIME",
-                "allowNull": false,
+                "type": "VARCHAR(255)",
+                "allowNull": true,
                 "defaultValue": null,
                 "listview": {
                     "show": true

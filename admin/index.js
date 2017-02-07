@@ -1,10 +1,14 @@
+import path from 'path';
 
-const config = {
-  dpath: './',
-  config: require('./config.json'),
-  settings: require('./settings.json'),
-  custom: require('./custom.json'),
-  users: require('./users.json'),
+import config from './config.json';
+import settings from './settings.json';
+import custom from './custom.json';
+import users from './users.json';
+
+export default {
+  dpath: path.join(__dirname),
+  config,
+  settings,
+  custom,
+  users,
 };
-
-export default config;
