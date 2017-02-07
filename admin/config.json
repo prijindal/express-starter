@@ -1,6 +1,8 @@
 {
-    "sqlite": {
-        "database": "database.sqlite"
+    "pg": {
+        "database": "express",
+        "user": "postgres",
+        "password": "postgres"
     },
     "server": {
         "port": 1337

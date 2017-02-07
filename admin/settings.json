@@ -1,19 +1,35 @@
 {
-    "sqlite_sequence": {
-        "slug": "sqlite_sequence",
+    "users": {
+        "slug": "users",
         "table": {
-            "name": "sqlite_sequence",
-            "pk": "",
-            "verbose": "sqlite_sequence"
+            "name": "users",
+            "pk": "id",
+            "verbose": "users"
         },
         "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
             {
                 "name": "name",
                 "verbose": "name",
                 "control": {
                     "text": true
                 },
-                "type": "",
+                "type": "varchar(255)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
@@ -24,12 +40,12 @@
                 }
             },
             {
-                "name": "seq",
-                "verbose": "seq",
+                "name": "email",
+                "verbose": "email",
                 "control": {
                     "text": true
                 },
-                "type": "",
+                "type": "varchar(255)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
@@ -51,12 +67,12 @@
             "readonly": false
         }
     },
-    "user": {
-        "slug": "user",
+    "addresses": {
+        "slug": "addresses",
         "table": {
-            "name": "user",
+            "name": "addresses",
             "pk": "id",
-            "verbose": "user"
+            "verbose": "addresses"
         },
         "columns": [
             {
@@ -65,7 +81,23 @@
                 "control": {
                     "text": true
                 },
-                "type": "INTEGER",
+                "type": "integer",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "address",
+                "verbose": "address",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
@@ -76,60 +108,12 @@
                 }
             },
             {
-                "name": "first_name",
-                "verbose": "first_name",
+                "name": "userId",
+                "verbose": "userId",
                 "control": {
                     "text": true
                 },
-                "type": "VARCHAR(255)",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "last_name",
-                "verbose": "last_name",
-                "control": {
-                    "text": true
-                },
-                "type": "VARCHAR(255)",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "createdAt",
-                "verbose": "createdAt",
-                "control": {
-                    "text": true
-                },
-                "type": "VARCHAR(255)",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "updatedAt",
-                "verbose": "updatedAt",
-                "control": {
-                    "text": true
-                },
-                "type": "VARCHAR(255)",
+                "type": "integer",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {

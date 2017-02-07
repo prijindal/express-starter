@@ -1,5 +1,7 @@
 import epilogue from 'epilogue';
-import sequelize, { User } from '../db';
+import sequelize from '../db';
+
+import Models from '../db/models';
 
 import app from '../app';
 
@@ -9,6 +11,11 @@ epilogue.initialize({
 });
 
 epilogue.resource({
-  model: User,
+  model: Models.User,
   endpoints: ['/users', '/users/:id'],
+});
+
+epilogue.resource({
+  model: Models.Address,
+  endpoints: ['/addresses', '/addresses/:id'],
 });
