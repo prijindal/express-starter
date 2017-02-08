@@ -8,6 +8,7 @@
     "admin": "admin admin",
     "test": "babel-node test/index.js",
     "server": "babel-node server.js",
+    "graphqlviz": "graphqlviz 'http://localhost:3000/graphql' | dot -Tpng -o graphqlviz.png",
     "server:refresh": "echo '{}' > admin/settings.json && babel-node db/populate && npm run server",
     "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'database.sqlite' --ignore 'settings.json' --exec 'npm run server' --verbose"
   },
