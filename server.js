@@ -11,6 +11,7 @@ import './epilogue';
 
 
 const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
 
 sequelize.sync()
 .then(() => {
@@ -24,7 +25,7 @@ sequelize.sync()
       graphiql: true,
     }));
 
-    app.listen(PORT, () => console.log(`Listening at: ${PORT}`));
+    app.listen(PORT, HOST, () => console.log(`Listening at ${HOST}:${PORT}`)); // eslint-disable-line no-console
   });
 })
 .catch(console.error); // eslint-disable-line no-console
