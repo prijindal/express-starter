@@ -1,5 +1,5 @@
 import { GraphQLObjectType, GraphQLList } from 'graphql';
-import { resolver, attributeFields } from 'graphql-sequelize';
+import { resolver, attributeFields, defaultListArgs } from 'graphql-sequelize';
 
 import Models from '../../db/models';
 import addressType from './address';
@@ -13,6 +13,7 @@ const userType = new GraphQLObjectType({
     addresses: {
       type: new GraphQLList(addressType),
       resolve: resolver(User.Addresses),
+      args: defaultListArgs(),
     },
   }),
 });

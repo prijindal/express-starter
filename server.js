@@ -3,7 +3,7 @@
 import xAdmin from 'express-admin';
 import graphqlHTTP from 'express-graphql';
 import sequelize from './db';
-import populateData from './db/populate';
+// import populateData from './db/populate';
 import app from './app';
 import adminConfig from './admin';
 import schema from './graphql';
@@ -24,7 +24,7 @@ sequelize.sync({ force: true })
       graphiql: true,
     }));
 
-    app.listen(PORT, populateData);
+    app.listen(PORT);
   });
 })
 .catch(console.error); // eslint-disable-line no-console

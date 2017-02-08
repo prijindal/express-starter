@@ -7,8 +7,9 @@
   "scripts": {
     "admin": "admin admin",
     "test": "babel-node test/index.js",
-    "server": "echo '{}' > admin/settings.json && babel-node server.js",
-    "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'database.sqlite' --ignore 'settings.json' --exec 'npm run server' --verbose"
+    "server": "babel-node server.js",
+    "server:reload": "echo '{}' > admin/settings.json && babel-node db/populate && npm run server",
+    "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'database.sqlite' --ignore 'settings.json' --exec 'npm run server:reload' --verbose"
   },
   "dependencies": {
     "body-parser": "^1.16.0",

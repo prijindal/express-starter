@@ -10,12 +10,11 @@ const addressType = new GraphQLObjectType({
   name: 'Address',
   description: 'An address',
   fields: () => ({
-    ...Object.assign(attributeFields(Address), {
-      user: {
-        type: userType,
-        resolve: resolver(Address.User),
-      },
-    }),
+    ...attributeFields(Address),
+    user: {
+      type: userType,
+      resolve: resolver(Address.User),
+    },
   }),
 });
 

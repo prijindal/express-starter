@@ -14,4 +14,6 @@ const populateData = async () => {
   });
 };
 
+populateData();
+
 export default populateData;
