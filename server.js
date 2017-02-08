@@ -12,7 +12,7 @@ import './epilogue';
 
 const PORT = process.env.PORT || 3000;
 
-sequelize.sync({ force: true })
+sequelize.sync()
 .then(() => {
   xAdmin.init(adminConfig, (err, admin) => {
     if (err) throw err;
@@ -24,7 +24,7 @@ sequelize.sync({ force: true })
       graphiql: true,
     }));
 
-    app.listen(PORT);
+    app.listen(PORT, () => console.log(`Listening at: ${PORT}`));
   });
 })
 .catch(console.error); // eslint-disable-line no-console

@@ -8,8 +8,8 @@
     "admin": "admin admin",
     "test": "babel-node test/index.js",
     "server": "babel-node server.js",
-    "server:reload": "echo '{}' > admin/settings.json && babel-node db/populate && npm run server",
-    "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'database.sqlite' --ignore 'settings.json' --exec 'npm run server:reload' --verbose"
+    "server:refresh": "echo '{}' > admin/settings.json && babel-node db/populate && npm run server",
+    "start": "nodemon --ignore 'database.sqlite-journal' --ignore 'database.sqlite' --ignore 'settings.json' --exec 'npm run server' --verbose"
   },
   "dependencies": {
     "body-parser": "^1.16.0",
@@ -17,9 +17,10 @@
     "express": "^4.14.1",
     "express-admin": "^1.2.8",
     "express-graphql": "^0.6.3",
-    "graphql": "^0.9.1",
-    "graphql-relay": "^0.5.1",
+    "graphql": "^0.8.0",
+    "graphql-relay": "^0.4.2",
     "graphql-sequelize": "^5.1.0",
+    "graphql-sequelize-crud": "^0.3.0",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.30.1"

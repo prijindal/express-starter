@@ -1,11 +1,10 @@
 {
     "pg": {
+        "host": "localhost",
+        "port": "5432",
         "database": "express",
         "user": "postgres",
         "password": "postgres"
-    },
-    "server": {
-        "port": 1337
     },
     "app": {
         "layouts": true,

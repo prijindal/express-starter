@@ -847,7 +847,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.0.0, bluebird@^3.3.4, bluebird@^3.4.6:
+bluebird@^3.0.0, bluebird@^3.3.4, bluebird@^3.4.1, bluebird@^3.4.6:
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
@@ -932,6 +932,10 @@ caller-path@^0.1.0:
 callsites@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
+
+camelcase@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -1952,9 +1956,18 @@ graphiql@^0.9.1:
     codemirror-graphql "0.6.2"
     marked "0.3.6"
 
-graphql-relay@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.1.tgz#3b3e44430a24c0f636e713f43f65bd542fe02ac9"
+graphql-relay@^0.4.2:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.4.4.tgz#876a654445b6af4539f81cb9befd5cd7ead129dd"
+
+graphql-sequelize-crud@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/graphql-sequelize-crud/-/graphql-sequelize-crud-0.3.0.tgz#f1d75d23dd3d7f044f1c9f19c4a90847a4e0405a"
+  dependencies:
+    bluebird "^3.4.1"
+    camelcase "^3.0.0"
+    lodash "^4.13.1"
+    pluralize "^3.0.0"
 
 graphql-sequelize@^5.1.0:
   version "5.1.0"
@@ -1963,11 +1976,11 @@ graphql-sequelize@^5.1.0:
     dataloader-sequelize "^1.4.3"
     lodash "^4.0.0"
 
-graphql@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.9.1.tgz#f4d154cbec054d4a5d3b1be95f23435c09aa86c8"
+graphql@^0.8.0:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.8.2.tgz#eb1bb524b38104bbf2c9157f9abc67db2feba7d2"
   dependencies:
-    iterall "1.0.3"
+    iterall "1.0.2"
 
 har-validator@~2.0.6:
   version "2.0.6"
@@ -2276,9 +2289,9 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-iterall@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.0.3.tgz#e0b31958f835013c323ff0b10943829ac69aa4b7"
+iterall@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.0.2.tgz#41a2e96ce9eda5e61c767ee5dc312373bb046e91"
 
 jodid25519@^1.0.0:
   version "1.0.2"
@@ -2450,7 +2463,7 @@ lodash@4.12.0, lodash@^4.0.0, lodash@^4.2.0, lodash@^4.8.2:
   version "4.12.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.12.0.tgz#2bd6dc46a040f59e686c972ed21d93dc59053258"
 
-lodash@^4.15.0, lodash@^4.3.0:
+lodash@^4.13.1, lodash@^4.15.0, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -2943,6 +2956,10 @@ pkg-up@^1.0.0:
 pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
+
+pluralize@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-3.1.0.tgz#84213d0a12356069daa84060c559242633161368"
 
 postgres-array@~1.0.0:
   version "1.0.2"

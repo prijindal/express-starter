@@ -1,5 +1,6 @@
-import User from './models/user';
-import Address from './models/address';
+import Models from './models';
+
+const { User, Address } = Models;
 
 const populateData = async () => {
   await User.sync({ force: true });

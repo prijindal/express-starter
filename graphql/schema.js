@@ -1,9 +1,8 @@
-import { GraphQLSchema } from 'graphql';
+import { getSchema } from 'graphql-sequelize-crud';
 
-import query from './queries';
+import sequelize from '../db';
+import '../db/models';
 
-const Schema = new GraphQLSchema({
-  query,
-});
+const Schema = getSchema(sequelize);
 
 export default Schema;
