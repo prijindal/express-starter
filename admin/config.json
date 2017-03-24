@@ -1,10 +1,6 @@
 {
-    "pg": {
-        "host": "localhost",
-        "port": "5432",
-        "database": "express",
-        "user": "postgres",
-        "password": "postgres"
+    "sqlite": {
+        "database": "database.sqlite"
     },
     "app": {
         "layouts": true,

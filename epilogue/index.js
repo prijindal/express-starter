@@ -16,6 +16,6 @@ epilogue.resource({
 });
 
 epilogue.resource({
-  model: Models.Address,
-  endpoints: ['/addresses', '/addresses/:id'],
+  model: Models.Order,
+  endpoints: ['/order', '/order/:id'],
 });

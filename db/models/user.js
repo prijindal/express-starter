@@ -8,6 +8,12 @@ const User = sequelize.define('user', {
   email: {
     type: Sequelize.STRING,
   },
+  address: {
+    type: Sequelize.STRING,
+  },
+  secure_key: {
+    type: Sequelize.STRING,
+  },
 }, {
   timestamps: false,
 });

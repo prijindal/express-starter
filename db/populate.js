@@ -1,6 +1,6 @@
 import Models from './models';
 
-const { User, Address } = Models;
+const { User, Order } = Models;
 
 const populateData = async () => {
   await User.sync({ force: true });
@@ -8,10 +8,10 @@ const populateData = async () => {
     name: 'Priyanshu Jindal',
     email: 'priyanshujindal1995@gmail.com',
   });
-  await Address.sync({ force: true });
-  await Address.create({
-    address: 'New Address',
-    userId: user.id,
+  await Order.sync({ force: true });
+  await Order.create({
+    name: 'Apple Iphone',
+    placedId: user.id,
   });
 };
 

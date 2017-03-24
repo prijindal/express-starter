@@ -1,10 +1,10 @@
-import Address from './address';
+import Order from './order';
 import User from './user';
 
-User.Addresses = User.hasMany(Address, { as: 'addresses' });
-Address.User = Address.belongsTo(User);
+User.Addresses = User.hasMany(Order,  { foreignKey: 'placedId' });
+Order.User = Order.belongsTo(User,  { as: 'placed' });
 
 export default {
   User,
-  Address,
+  Order,
 };
